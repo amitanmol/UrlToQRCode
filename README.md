@@ -6,3 +6,4 @@ This is just a sample code for beginners to generate qrcode from an url. This sa
 
 Enter url in textbox and click on button it will generate qrcode and show below button as image.
 
+![UrlToQRCode](https://github.com/amitanmol/UrlToQRCode/blob/master/url-to-qrcode.png)
