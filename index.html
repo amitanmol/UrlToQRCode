@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function () {
+                var url = document.getElementById('url').value;
+                if (url != "") {
+                    var finalUrl = "http://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + url + "&choe=UTF-8&chld=L|1";
+
+                    var qr = document.getElementById('qrcode');
+                    qr.src = finalUrl;
+                }
+                else {
+                    alert("Please enter url");
+                }
+            });
+        });
+    </script>
+</head>
+<body style="padding:10%;">
+    <div class="form-group">
+        <label for="usr">Enter URL:</label>
+        <input type="text" class="form-control" id="url" placeholder="Please enter url." value="http://www.electrical-guru.com/">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary center-block">Generate QR Code</button>
+    </div>
+    <div class="form-group">
+        <img id="qrcode" src="http://www.electrical-guru.com/Admin/images/ab.png" class="img-thumbnail center-block" alt="qr code">
+    </div>
+</body>
+</html>
